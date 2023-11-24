@@ -1,0 +1,20 @@
+<?php
+include 'connection.php';
+
+if (isset($_POST['save_btn'])) {
+    $fname = $_POST['firstname'];
+    $lname = $_POST['lastname'];
+    $age = $_POST['age'];
+    $query = "INSERT INTO student (firstname, lastname, age) VALUES ('$fname', '$lname', '$age')";
+    $data = mysqli_query($con, $query);
+
+    if ($data) {
+        echo "succesfull";
+	include 'index.php';
+    } else {
+        echo "Error: " . mysqli_error($con);
+    }
+}
+
+mysqli_close($con);
+?>
