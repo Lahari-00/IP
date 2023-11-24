@@ -1,0 +1,18 @@
+<?php include 'connection.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Database</title>
+</head>
+<body>
+    <div>
+        <form action="save.php" method="POST">
+            <input type="text" name="firstname" placeholder="First Name"> <br><br>
+            <input type="text" name="lastname" placeholder="Last Name"> <br><br>
+            <input type="number" name="age" placeholder="Age"> <br><br>
+            <input type="submit" name="save_btn" value="Save"> <br><br>
+        </form>
+    </div>
+    <a href="view.php">View Data</a>
+</body>
+</html>
